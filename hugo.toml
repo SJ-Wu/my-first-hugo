@@ -1,0 +1,51 @@
+baseURL = 'http://localhost:1313/'
+locale = 'zh-tw'
+title = '我的個人部落格'
+theme = 'PaperMod'
+
+[params]
+env = "production"
+title = "我的個人部落格"
+description = "歡迎來到我的個人部落格，分享技術與生活。"
+author = "Nick Wu"
+
+# 主題設定
+defaultTheme = "auto" # dark, light, auto
+disableThemeToggle = false
+ShowShareButtons = true
+ShowReadingTime = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+
+# 首頁歡迎語設定
+[params.homeInfoParams]
+Title = "Hi there 👋"
+Content = "這是我的個人空間。在這裡，我會分享程式開發、技術筆記與日常生活隨筆。"
+
+# 社群連結設定
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:example@example.com"
+
+# 選單設定
+[menu]
+[[menu.main]]
+name = "文章"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+name = "分類"
+url = "/categories/"
+weight = 20
+
+[[menu.main]]
+name = "標籤"
+url = "/tags/"
+weight = 30
