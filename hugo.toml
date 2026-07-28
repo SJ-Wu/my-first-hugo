@@ -1,4 +1,4 @@
-baseURL = 'https://SJ-Wu.github.io/my-first-hugo/'
+baseURL = 'https://sj-wu.com/my-first-hugo/'
 locale = 'zh-tw'
 title = '我的個人部落格'
 theme = 'PaperMod'
