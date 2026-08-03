@@ -2,6 +2,7 @@
 title = "我的第一篇部落格文章"
 date = "2026-07-04T22:34:11+08:00"
 draft = false
+translationKey = "my-first-post"
 tags = ["隨筆", "Hugo"]
 categories = ["生活"]
 +++

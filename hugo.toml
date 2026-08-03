@@ -1,12 +1,11 @@
 baseURL = 'https://sj-wu.com/my-first-hugo/'
-locale = 'zh-tw'
-title = '我的個人部落格'
 theme = 'PaperMod'
+
+defaultContentLanguage = 'zh-tw'
+defaultContentLanguageInSubdir = false
 
 [params]
 env = "production"
-title = "我的個人部落格"
-description = "歡迎來到我的個人部落格，分享技術與生活。"
 author = "Nick Wu"
 
 # 主題設定
@@ -19,12 +18,7 @@ ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
 
-# 首頁歡迎語設定
-[params.homeInfoParams]
-Title = "Hi there 👋"
-Content = "這是我的個人空間。在這裡，我會分享程式開發、技術筆記與日常生活隨筆。"
-
-# 社群連結設定
+# 社群連結設定（各語言共用）
 [[params.socialIcons]]
 name = "github"
 url = "https://github.com/"
@@ -33,19 +27,101 @@ url = "https://github.com/"
 name = "email"
 url = "mailto:example@example.com"
 
-# 選單設定
-[menu]
-[[menu.main]]
+
+# ---------------------------------------------------------------
+# 繁體中文（預設語言，位於網站根目錄）
+# ---------------------------------------------------------------
+[languages.zh-tw]
+label = "繁體中文"
+locale = "zh-TW"
+contentDir = "content/zh-tw"
+weight = 1
+title = "我的個人部落格"
+
+[languages.zh-tw.params]
+description = "歡迎來到我的個人部落格，分享技術與生活。"
+
+[languages.zh-tw.params.homeInfoParams]
+Title = "Hi there 👋"
+Content = "這是我的個人空間。在這裡，我會分享程式開發、技術筆記與日常生活隨筆。"
+
+[[languages.zh-tw.menu.main]]
 name = "文章"
 url = "/posts/"
 weight = 10
 
-[[menu.main]]
+[[languages.zh-tw.menu.main]]
 name = "分類"
 url = "/categories/"
 weight = 20
 
-[[menu.main]]
+[[languages.zh-tw.menu.main]]
 name = "標籤"
+url = "/tags/"
+weight = 30
+
+
+# ---------------------------------------------------------------
+# English（/en/）
+# ---------------------------------------------------------------
+[languages.en]
+label = "English"
+locale = "en"
+contentDir = "content/en"
+weight = 2
+title = "My Personal Blog"
+
+[languages.en.params]
+description = "Welcome to my personal blog, where I share technology and life."
+
+[languages.en.params.homeInfoParams]
+Title = "Hi there 👋"
+Content = "This is my personal space, where I write about software development, technical notes, and everyday thoughts."
+
+[[languages.en.menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 10
+
+[[languages.en.menu.main]]
+name = "Categories"
+url = "/categories/"
+weight = 20
+
+[[languages.en.menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 30
+
+
+# ---------------------------------------------------------------
+# 日本語（/ja/）
+# ---------------------------------------------------------------
+[languages.ja]
+label = "日本語"
+locale = "ja"
+contentDir = "content/ja"
+weight = 3
+title = "私の個人ブログ"
+
+[languages.ja.params]
+description = "技術と日常について書いている個人ブログへようこそ。"
+
+[languages.ja.params.homeInfoParams]
+Title = "Hi there 👋"
+Content = "ここは私の個人スペースです。ソフトウェア開発、技術メモ、日々の雑感を書いています。"
+
+[[languages.ja.menu.main]]
+name = "記事"
+url = "/posts/"
+weight = 10
+
+[[languages.ja.menu.main]]
+name = "カテゴリー"
+url = "/categories/"
+weight = 20
+
+[[languages.ja.menu.main]]
+name = "タグ"
 url = "/tags/"
 weight = 30
